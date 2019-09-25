@@ -1,12 +1,14 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import InputRange from 'react-input-range';
 import 'react-input-range/lib/css/index.css';
+import ThankYou from './ThankYou';
+import Rate from './Rate';
 
 
 const App = () => {
   const [rate, setRate] = React.useState(7);
+  const [submitted, setSubmitted] = React.useState(false);
 
   return (
     <div className="App">
@@ -27,27 +29,17 @@ const App = () => {
         </div>
       </nav>
       <div className="main">
-        <img
-          src="https://i.etsystatic.com/18985996/r/il/976b61/1727027316/il_1588xN.1727027316_7ozm.jpg"
-          className="main-img"
-          alt="points"/>
-        <p>How clean the beach you're at?</p>
-        <InputRange
-          className="input-range"
-          maxValue={10}
-          minValue={0}
-          value={rate}
-          onChange={value => setRate(value)}
-        />
-        <p>What is the most common trash here?</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Submit
-        </a>
+        {submitted ?
+          <ThankYou/> :
+          <>
+            <Rate rate={rate} setRate={setRate}/>
+            <button
+              className="App-button"
+              onClick={() => setSubmitted(true)}
+            >
+              Submit
+            </button>
+          </>}
       </div>
 
     </div>
