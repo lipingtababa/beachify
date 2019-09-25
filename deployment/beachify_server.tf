@@ -2,18 +2,18 @@ provider "aws" {
   region     = "us-west-2"
 }
 
-resource "aws_instance" "vpn" {
+resource "aws_instance" "web_server" {
 	count 		= 1
 	ami        	= "ami-07583b15e91978cab"
 	instance_type 	= "t2.micro"
-	security_groups	= ["shadowsocks_sg"]
+	security_groups	= ["beachify_sg"]
 	key_name	= "machi"
-	tags = {Name = "VPN"}
+	tags = {Usage = "beachify"}
 }
 
-resource "aws_security_group" "shadowsocks_sg" {
-  name        = "shadowsocks_sg"
-  description = "Allow Shadowsocks traffic"
+resource "aws_security_group" "beachify_sg" {
+  name        = "beachify_sg"
+  description = "Allow HTTP, HTTPS, MySQL & SSH traffic"
   
   ingress {
     from_port   = 22
