@@ -15,3 +15,4 @@ name_of_beach varchar(255)
 
 describe user_data;
 
+LOAD DATA LOCAL INFILE '/home/ubuntu/beachify/beachify/beachify_data.csv' INTO TABLE user_data FIELDS TERMINATED BY ',' IGNORE 1 LINES;
