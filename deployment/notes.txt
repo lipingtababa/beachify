@@ -11,9 +11,6 @@ foobarbaz
 server add
 54.188.41.210
 
-
-AWS role
-https://signin.aws.amazon.com/switchrole?roleName=beachify_backend&account=094240567632
-
+http://54.188.41.210/index.html
 
 hellomarch3hellomarch3@gmail.com
