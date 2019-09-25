@@ -5,10 +5,22 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <nav className="navbar">
+        <img
+          src="https://pics.clipartpng.com/midle/Blue_Starfish_PNG_Clip_Art-1718.png"
+          className="img points-img"
+          alt="points"/>
+        <p className="points">3607</p>
+        <p className="username">Jay Bravo</p>
+        <img
+          src="https://bramdejager.files.wordpress.com/2019/05/bramdejager-600x600.png"
+          className="img avatar-img"
+          alt="points"/>
+      </nav>
+      <div className="main">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          How clean is the place you're in?
         </p>
         <a
           className="App-link"
@@ -16,9 +28,10 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Submit
         </a>
-      </header>
+      </div>
+
     </div>
   );
 }
