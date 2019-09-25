@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import 'react-input-range/lib/css/index.css';
 import ThankYou from './ThankYou';
@@ -7,8 +6,11 @@ import Rate from './Rate';
 
 
 const App = () => {
-  const [rate, setRate] = React.useState(7);
+  const [rate, setRate] = React.useState(4);
   const [submitted, setSubmitted] = React.useState(false);
+  const [plastic, setPlastic] = React.useState(false);
+  const [cans, setCans] = React.useState(false);
+  const [other, setOther] = React.useState(false);
 
   return (
     <div className="App">
@@ -30,9 +32,18 @@ const App = () => {
       </nav>
       <div className="main">
         {submitted ?
-          <ThankYou/> :
+          <ThankYou setSubmitted={setSubmitted}/> :
           <>
-            <Rate rate={rate} setRate={setRate}/>
+            <Rate
+              rate={rate}
+              setRate={setRate}
+              setPlastic={setPlastic}
+              plastic={plastic}
+              other={other}
+              setOther={setOther}
+              cans={cans}
+              setCans={setCans}
+            />
             <button
               className="App-button"
               onClick={() => setSubmitted(true)}
