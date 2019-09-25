@@ -2,7 +2,7 @@ create database beachify;
 
 create table if not exists user_data (
 
-user_id varchar(255) primary key, 
+user_id varchar(255) not null, 
 dt varchar(255) not null,
 geolocation_lat decimal(8, 6) not null,
 geolocation_long decimal(9, 6) not null,
