@@ -11,20 +11,22 @@
 }
 
 .main {
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(12px + 2vmin);
+    padding: 15px
 }
 
-.App-link {
-  color: #2887D6;
+.App-button {
+    color: #3f51b5;
+    font-size: xx-large;
 }
 
 .navbar {
-    background-color: black;
+    background-color: #3f51b5;
     height: 60px;
     color: white;
     display: flex;
@@ -33,7 +35,7 @@
 }
 
 .navbar-img {
-    height: 45px;
+    height: 40px;
     margin: auto 10px;
 }
 
@@ -53,5 +55,28 @@
 
 .main .input-range {
     width: 80%;
-    margin: 40px;
+    margin: 20px;
+}
+
+.main .input-range__label {
+    color: #3f51b5;
+    font-size: 16px;
+}
+
+.rangeslider {
+    width: 100%;
+    display: flex;
+}
+
+.slider-img {
+    height: 40px;
+    margin: auto;
+}
+
+.question {
+    margin: 30px 0;
+}
+
+.checkbox {
+    margin-bottom: 5px;
 }
