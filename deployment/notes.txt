@@ -1,3 +1,6 @@
 RDS
 terraform-20190925102837093100000001.cqsbocfe2ubh.us-west-2.rds.amazonaws.com
+server add
+54.188.41.210
+
 

@@ -21,6 +21,14 @@ resource "aws_security_group" "beachify_sg" {
     protocol    = "tcp"
     cidr_blocks     = ["0.0.0.0/0"]
   }
+
+  ingress {
+    from_port   = 3306
+    to_port     = 3306
+    protocol    = "tcp"
+    cidr_blocks     = ["0.0.0.0/0"]
+  }
+
   
   ingress {
     from_port   = 80
@@ -35,4 +43,9 @@ resource "aws_security_group" "beachify_sg" {
     protocol        = "-1"
     cidr_blocks     = ["0.0.0.0/0"]
   }
+}
+
+
+output "server_add" {
+	value = "${aws_instance.web_server[0].public_ip}"
 }
